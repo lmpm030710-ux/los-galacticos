@@ -1,0 +1,230 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porsche Heritage & Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fuentes e Iconos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-shield-halved"></i> PORSCHE <span>GALLERY</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#welcome">Inicio</a></li>
+      <li><a href="#featured">Destacados</a></li>
+      <li><a href="#catalog">Catálogo de Series</a></li>
+      <li><a href="#gallery">Galería y Álbumes</a></li>
+      <li><a href="#upload">Subir Foto</a></li>
+    </ul>
+  </nav>
+
+  <!-- BIENVENIDA (EN INGLÉS) -->
+  <header id="welcome" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="badge">ESTABLISHED 1948</div>
+      <h1>WELCOME TO THE PORSCHE EXCLUSIVE GALLERY</h1>
+      <p>Experience the timeless elegance, engineering perfection, and heritage of legendary performance.</p>
+      <a href="#gallery" class="btn-primary">Explorar Galería</a>
+    </div>
+  </header>
+
+  <!-- CARRUSEL DESTACADO -->
+  <section id="featured" class="section">
+    <div class="section-title">
+      <h2>MODELOS DESTACADOS</h2>
+      <div class="title-line"></div>
+    </div>
+    
+    <div class="carousel-container">
+      <button class="carousel-btn prev-btn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="carousel-track-container">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Tarjetas del Carrusel -->
+          <div class="carousel-card" onclick="openModal('356 Speedster', '1954', '60 HP', '155 km/h', 'Motor 1.5L Boxeador 4 cilindros', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80')">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80" alt="Porsche 356">
+            <div class="card-info">
+              <h3>Porsche 356 Speedster</h3>
+              <span>1954 • El Comienzo del Mito</span>
+            </div>
+          </div>
+          <div class="carousel-card" onclick="openModal('911 Carrera RS 2.7', '1973', '210 HP', '245 km/h', 'Motor 2.7L 6 cilindros Boxer', 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1000&q=80')">
+            <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1000&q=80" alt="Porsche 911 RS">
+            <div class="card-info">
+              <h3>Porsche 911 Carrera RS</h3>
+              <span>1973 • Icono Clásico</span>
+            </div>
+          </div>
+          <div class="carousel-card" onclick="openModal('Porsche 918 Spyder', '2015', '887 HP', '345 km/h', 'V8 4.6L + 2 Motores Eléctricos', 'https://images.unsplash.com/photo-1611821064430-0d40291d0f0d?auto=format&fit=crop&w=1000&q=80')">
+            <img src="https://images.unsplash.com/photo-1611821064430-0d40291d0f0d?auto=format&fit=crop&w=1000&q=80" alt="Porsche 918">
+            <div class="card-info">
+              <h3>Porsche 918 Spyder</h3>
+              <span>2015 • Hiperdeportivo Híbrido</span>
+            </div>
+          </div>
+          <div class="carousel-card" onclick="openModal('Taycan Turbo S', '2024', '761 HP', '260 km/h', 'Motores Eléctricos Síncronos', 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1000&q=80')">
+            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1000&q=80" alt="Porsche Taycan">
+            <div class="card-info">
+              <h3>Porsche Taycan Turbo S</h3>
+              <span>2024 • Reinvención Eléctrica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn next-btn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO HISTÓRICO DE SERIES -->
+  <section id="catalog" class="section bg-darker">
+    <div class="section-title">
+      <h2>CATÁLOGO HISTÓRICO DE SERIES</h2>
+      <p>Desde los clásicos eternos hasta la vanguardia de la ingeniería moderna.</p>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="catalog-grid">
+      <div class="catalog-card" onclick="openModal('Serie 356', '1948 - 1965', '40 - 130 HP', '140-200 km/h', '4 cilindros opuestos', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80')">
+        <div class="catalog-tag">Primera Era</div>
+        <h3>Serie 356</h3>
+        <p>El primer automóvil de producción con el nombre Porsche. Ligero y ágil.</p>
+      </div>
+
+      <div class="catalog-card" onclick="openModal('Serie 911 Clásica', '1964 - 1989', '130 - 300 HP', '210-260 km/h', '6 cilindros Boxer refrigerado por aire', 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1000&q=80')">
+        <div class="catalog-tag">Ícono Atemporal</div>
+        <h3>Serie 911 Clásico</h3>
+        <p>La silueta inconfundible que definió a la marca durante décadas.</p>
+      </div>
+
+      <div class="catalog-card" onclick="openModal('Serie 928 / 944', '1977 - 1995', '150 - 350 HP', '220-275 km/h', 'Motores V8 y 4 cilindros frontales', 'https://images.unsplash.com/photo-1541348263662-e082662d82da?auto=format&fit=crop&w=1000&q=80')">
+        <div class="catalog-tag">Transaxle Era</div>
+        <h3>Serie 944 / 928</h3>
+        <p>Gran Turismo innovador con distribución de peso perfecta 50/50.</p>
+      </div>
+
+      <div class="catalog-card" onclick="openModal('Serie 911 (991 & 992)', '2011 - Presente', '385 - 650 HP', '293-330 km/h', '3.0L a 3.8L Twin-Turbo Boxer', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80')">
+        <div class="catalog-tag">Era Moderna</div>
+        <h3>Serie 911 (Moderno)</h3>
+        <p>La máxima evolución tecnológica manteniendo la esencia deportiva pura.</p>
+      </div>
+
+      <div class="catalog-card" onclick="openModal('Serie Taycan', '2019 - Presente', '408 - 952 HP', '230-260 km/h', 'Arquitectura Eléctrica 800V', 'https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=1000&q=80')">
+        <div class="catalog-tag">Futuro Eléctrico</div>
+        <h3>Serie Taycan</h3>
+        <p>Rendimiento electrizante con cero emisiones y dinámica Porsche impecable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA, ÁLBUMES Y FILTROS -->
+  <section id="gallery" class="section">
+    <div class="section-title">
+      <h2>GALERÍA DE FOTOS</h2>
+      <div class="title-line"></div>
+    </div>
+
+    <!-- Pestañas de Álbumes -->
+    <div class="albums-tabs">
+      <button class="album-btn active" onclick="switchAlbum('all')"><i class="fa-solid fa-border-all"></i> Todos</button>
+      <button class="album-btn" onclick="switchAlbum('clasicos')"><i class="fa-solid fa-clock-rotate-left"></i> Clásicos</button>
+      <button class="album-btn" onclick="switchAlbum('deportivos')"><i class="fa-solid fa-car-side"></i> Deportivos</button>
+      <button class="album-btn" onclick="switchAlbum('hypercars')"><i class="fa-solid fa-bolt"></i> Hiperdeportivos</button>
+      <button class="album-btn" onclick="switchAlbum('user')"><i class="fa-solid fa-folder-user"></i> Mis Fotos Subidas</button>
+    </div>
+
+    <!-- Barra de Filtros Visuales -->
+    <div class="filters-bar">
+      <span><i class="fa-solid fa-wand-magic-sparkles"></i> Aplicar Filtro:</span>
+      <button class="filter-btn active" onclick="applyFilter('none')">Original</button>
+      <button class="filter-btn" onclick="applyFilter('bw')">Blanco y Negro</button>
+      <button class="filter-btn" onclick="applyFilter('sepia')">Sepia Vintage</button>
+      <button class="filter-btn" onclick="applyFilter('contrast')">Alto Contraste</button>
+      <button class="filter-btn" onclick="applyFilter('silver')">Plata Lujoso</button>
+    </div>
+
+    <!-- Contenedor de la Galería -->
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Fotos inyectadas por JS -->
+    </div>
+  </section>
+
+  <!-- SECCIÓN PARA SUBIR FOTOS -->
+  <section id="upload" class="section bg-darker">
+    <div class="upload-container">
+      <div class="section-title">
+        <h2>AÑADIR TU PORSCHE</h2>
+        <p>Sube imágenes desde tu teléfono o computadora para agregarlas a tu álbum personalizado.</p>
+        <div class="title-line"></div>
+      </div>
+
+      <form id="uploadForm" class="upload-form">
+        <div class="drop-zone" id="dropZone">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <p>Arrastra tu foto aquí o <span>Haz clic para buscar</span></p>
+          <input type="file" id="fileInput" accept="image/*" required hidden>
+        </div>
+        
+        <div class="input-group">
+          <input type="text" id="carTitle" placeholder="Modelo o Título (ej. Porsche GT3 RS)" required>
+          <input type="text" id="carYear" placeholder="Año (ej. 2023)" required>
+        </div>
+
+        <button type="submit" class="btn-primary"><i class="fa-solid fa-plus"></i> Guardar en mi Álbum</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- MODAL DE ESPECIFICACIONES -->
+  <div class="modal" id="specModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="Porsche Specs">
+        <div class="modal-details">
+          <h2 id="modalTitle">Nombre del Modelo</h2>
+          <span class="modal-year" id="modalYear">Año</span>
+          
+          <div class="specs-grid">
+            <div class="spec-item">
+              <i class="fa-solid fa-gauge-high"></i>
+              <div>
+                <small>Potencia</small>
+                <strong id="modalHp">-</strong>
+              </div>
+            </div>
+            <div class="spec-item">
+              <i class="fa-solid fa-stopwatch"></i>
+              <div>
+                <small>Velocidad Máx.</small>
+                <strong id="modalSpeed">-</strong>
+              </div>
+            </div>
+            <div class="spec-item">
+              <i class="fa-solid fa-gears"></i>
+              <div>
+                <small>Motor</small>
+                <strong id="modalEngine">-</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 Porsche Heritage Gallery. Diseñado con lujo y precisión alemana.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
